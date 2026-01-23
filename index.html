@@ -74,6 +74,19 @@
       opacity: 0.6;
       text-align: center;
     }
+    .cursor {
+  display: inline-block;
+  width: 8px;
+  height: 1.2rem;
+  background: #7CFF00;
+  margin-left: 4px;
+  animation: blink 1s infinite;
+  vertical-align: middle;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
   </style>
 </head>
 
@@ -81,7 +94,11 @@
 <div class="container">
 
   <!-- WHOAMI -->
-  <h1><span class="prompt">$</span> whoami</h1>
+  <h1>
+  <span class="prompt">$</span>
+  <span id="type-whoami"></span>
+  <span class="cursor"></span>
+</h1>
 <p class="cmd">Shakir Bhat — Cloud • Site Reliability Engineer • DevOps (6+ years)</p>
 
 <h2><span class="prompt">$</span> pwd</h2>
@@ -271,6 +288,20 @@
 
 <script>
   feather.replace();
+</script>
+  <script>
+  const text = "whoami";
+  let i = 0;
+
+  function typeWhoami() {
+    if (i < text.length) {
+      document.getElementById("type-whoami").innerHTML += text.charAt(i);
+      i++;
+      setTimeout(typeWhoami, 120);
+    }
+  }
+
+  typeWhoami();
 </script>
 </body>
 </html>
