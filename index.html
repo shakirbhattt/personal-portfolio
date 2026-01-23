@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shakir Bhat | SRE / DevOps</title>
 
-  <!-- Fonts & Icons -->
+  <!-- Font + Icons -->
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/feather-icons"></script>
 
@@ -13,7 +13,7 @@
     body {
       margin: 0;
       background: #000;
-      color: #c9fdd7;
+      color: #ffffff;
       font-family: 'JetBrains Mono', monospace;
       line-height: 1.7;
     }
@@ -24,25 +24,26 @@
       padding: 60px 20px;
     }
 
+    /* terminal command style */
     h1, h2 {
-      margin-top: 60px;
       font-size: 1.4rem;
       font-weight: 400;
+      color: #7CFF00;
+      margin-top: 50px;
     }
 
-    h1 {
-      font-size: 1.4rem;
-      font-weight: 400;
+    .prompt {
+      color: #7CFF00;
     }
-    h2 { margin-top: 60px; font-size: 1.4rem; }
 
-    .prompt { color: #7CFF00; }
-    .cmd { color: #ffffff; }
+    .cmd {
+      color: #ffffff;
+    }
 
     .icon-row {
       display: flex;
       flex-wrap: wrap;
-      gap: 16px;
+      gap: 12px;
       margin-top: 10px;
     }
 
@@ -54,11 +55,18 @@
       border: 1px solid #1f2937;
       border-radius: 6px;
       background: #020617;
-      color: #c9fdd7;
       font-size: 0.9rem;
+      color: #c9fdd7;
     }
 
-    a { color: #7CFF00; text-decoration: none; }
+    a {
+      color: #7CFF00;
+      text-decoration: none;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
 
     footer {
       margin-top: 80px;
@@ -68,10 +76,11 @@
     }
   </style>
 </head>
-<body>
 
+<body>
 <div class="container">
 
+  <!-- WHOAMI -->
   <h1><span class="prompt">$</span> whoami</h1>
   <p class="cmd">Shakir Bhat — Site Reliability Engineer / DevOps</p>
   <p class="cmd">6+ years • AWS • Kubernetes • CI/CD • Observability</p>
@@ -81,77 +90,77 @@
     <a href="https://www.linkedin.com/in/shakir-bhat-80b770159">LinkedIn</a>
   </p>
 
+  <!-- SKILLS -->
   <h2><span class="prompt">$</span> cat skills/all.txt</h2>
   <div class="icon-row">
+    <!-- OS -->
     <div class="chip"><i data-feather="terminal"></i> Windows</div>
     <div class="chip"><i data-feather="terminal"></i> Linux</div>
     <div class="chip"><i data-feather="monitor"></i> RHEL</div>
     <div class="chip"><i data-feather="monitor"></i> Ubuntu</div>
     <div class="chip"><i data-feather="monitor"></i> CentOS</div>
 
+    <!-- Cloud -->
     <div class="chip"><i data-feather="cloud"></i> AWS</div>
     <div class="chip"><i data-feather="cpu"></i> VMware</div>
     <div class="chip"><i data-feather="layers"></i> Kubernetes</div>
     <div class="chip"><i data-feather="box"></i> Docker</div>
 
+    <!-- CI/CD -->
     <div class="chip"><i data-feather="git-branch"></i> Git</div>
     <div class="chip"><i data-feather="repeat"></i> Jenkins</div>
     <div class="chip"><i data-feather="repeat"></i> Bamboo</div>
 
+    <!-- IaC -->
     <div class="chip"><i data-feather="settings"></i> Terraform</div>
     <div class="chip"><i data-feather="settings"></i> Ansible</div>
     <div class="chip"><i data-feather="settings"></i> Salt</div>
 
+    <!-- Monitoring -->
     <div class="chip"><i data-feather="activity"></i> Prometheus</div>
     <div class="chip"><i data-feather="bar-chart"></i> Grafana</div>
     <div class="chip"><i data-feather="activity"></i> New Relic</div>
     <div class="chip"><i data-feather="activity"></i> Splunk</div>
     <div class="chip"><i data-feather="activity"></i> Nagios</div>
 
-    <div class="chip"><i data-feather="shield"></i> HashiCorp Vault</div>
-    <div class="chip"><i data-feather="lock"></i> SSL / TLS</div>
+    <!-- Security -->
+    <div class="chip"><i data-feather="shield"></i> Vault</div>
+    <div class="chip"><i data-feather="lock"></i> SSL/TLS</div>
 
+    <!-- Other -->
     <div class="chip"><i data-feather="code"></i> Bash</div>
-
     <div class="chip"><i data-feather="database"></i> MySQL</div>
     <div class="chip"><i data-feather="database"></i> PostgreSQL</div>
     <div class="chip"><i data-feather="globe"></i> TCP/IP</div>
     <div class="chip"><i data-feather="globe"></i> DNS</div>
-
     <div class="chip"><i data-feather="package"></i> Nexus</div>
     <div class="chip"><i data-feather="package"></i> Docker Hub</div>
     <div class="chip"><i data-feather="package"></i> GitHub</div>
     <div class="chip"><i data-feather="package"></i> Helm</div>
-
     <div class="chip"><i data-feather="file-text"></i> YAML</div>
-
     <div class="chip"><i data-feather="users"></i> Jira</div>
     <div class="chip"><i data-feather="bell"></i> OpsGenie</div>
     <div class="chip"><i data-feather="book"></i> Confluence</div>
   </div>
 
+  <!-- EXPERIENCE -->
   <h2><span class="prompt">$</span> history | grep experience</h2>
+
   <p class="cmd"><b>DigiCert</b> — Site Reliability Engineer (2024–Present)</p>
   <ul class="cmd">
-    <li>Maintained 99.9% uptime on Kubernetes production workloads</li>
-    <li>Reduced MTTR by 35% via alert tuning & RCA</li>
+    <li>99.9% uptime on Kubernetes production systems</li>
+    <li>Reduced MTTR by 35%</li>
     <li>Owned CI/CD pipelines for 20+ services</li>
   </ul>
 
-  <p class="cmd"><b>Movate (Client: InMobi)</b> — Senior SRE (2021–2024)</p>
+  <p class="cmd"><b>Movate (InMobi)</b> — Senior SRE (2021–2024)</p>
   <ul class="cmd">
-    <li>2× deployment frequency with Jenkins & Kubernetes</li>
-    <li>30% reduction in release failures</li>
-    <li>Zero‑downtime production rollouts</li>
+    <li>2× deployment frequency</li>
+    <li>30% fewer release failures</li>
+    <li>Zero-downtime rollouts</li>
   </ul>
 
-  <h2><span class="prompt">$</span> cat achievements.log</h2>
-  <ul class="cmd">
-    <li>99.9% production uptime</li>
-    <li>35% MTTR reduction</li>
-    <li>30% on‑call alert noise reduction</li>
-  </ul>
-
+  <!-- EXIT -->
   <h2><span class="prompt">$</span> exit</h2>
 
   <footer>
@@ -163,6 +172,5 @@
 <script>
   feather.replace();
 </script>
-
 </body>
 </html>
