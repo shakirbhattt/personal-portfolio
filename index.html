@@ -10,20 +10,6 @@
   <script src="https://unpkg.com/feather-icons"></script>
 
   <style>
-   <script>
-const text = "whoami";
-let i = 0;
-
-function typeEffect() {
-  if (i < text.length) {
-    document.getElementById("type-whoami").innerHTML += text.charAt(i);
-    i++;
-    setTimeout(typeEffect, 120);
-  }
-}
-
-typeEffect();
-</script>
     body {
       margin: 0;
       background: #000;
@@ -95,14 +81,14 @@ typeEffect();
 <div class="container">
 
   <!-- WHOAMI -->
-  <h1><span class="prompt">$</span> whoami</h1>
+  <h1>
+  <span class="prompt">$</span>
+  <span id="type-whoami"></span>
+</h1>
 <p class="cmd">Shakir Bhat — Cloud • Site Reliability Engineer • DevOps (6+ years)</p>
 
 <h2><span class="prompt">$</span> pwd</h2>
 <p class="cmd">/Kashmir • /Bangalore</p>
-
-  <h2><span class="prompt">$</span> uptime</h2>
-<p class="cmd">up 6 years, load average: 0.00, 0.01, 0.05</p>
 
 <h2><span class="prompt">$</span> printenv CONTACT</h2>
   <p class="cmd">
