@@ -11,18 +11,19 @@
 
   <style>
     body {
-      margin: 0;
-      background: #000;
-      color: #ffffff;
-      font-family: 'JetBrains Mono', monospace;
-      line-height: 1.7;
-    }
+  margin: 0;
+  background: #0b0f14;        /* real terminal dark */
+  color: #e6edf3;             /* soft terminal white */
+  font-family: 'JetBrains Mono', monospace;
+  line-height: 1.7;
+}
 
     .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 60px 20px;
-    }
+  max-width: 900px;
+  margin: auto;
+  padding: 60px 20px;
+  text-shadow: 0 0 6px rgba(0, 255, 135, 0.05);
+}
 
     /* terminal command style */
     h1, h2 {
@@ -33,12 +34,11 @@
     }
 
     .prompt {
-      color: #7CFF00;
-    }
-
+  color: #00ff87;  /* linux terminal green */
+   }
     .cmd {
-      color: #ffffff;
-    }
+  color: #e6edf3;  /* softer shell output */
+  }
 
     .icon-row {
       display: flex;
