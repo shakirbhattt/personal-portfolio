@@ -3,86 +3,136 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shakir Bhat | SRE • DevOps</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Shakir Bhat | DevOps / SRE</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { background: radial-gradient(circle at 20% 20%, #020617, #000); }
+  </style>
 </head>
-<body>
+<body class="text-gray-200">
 
-<header class="hero">
-  <h1>Shakir Bhat</h1>
-  <p>Site Reliability Engineer | DevOps | Cloud</p>
-  <div class="links">
-    <a href="https://github.com/shakirbhattt" target="_blank">GitHub</a>
-    <a href="https://www.linkedin.com/in/shakir-bhat-80b770159" target="_blank">LinkedIn</a>
+<!-- HERO -->
+<section class="min-h-screen flex items-center justify-center text-center px-6">
+  <div class="max-w-4xl">
+    <h1 class="text-6xl md:text-7xl font-extrabold bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent">
+      Shakir Bhat
+    </h1>
+    <p class="mt-6 text-xl text-gray-400">Site Reliability Engineer • DevOps • Cloud Architect</p>
+
+    <div class="mt-8 flex justify-center gap-4">
+      <a href="#contact" class="px-6 py-3 bg-cyan-600 rounded-xl hover:scale-105 transition">Contact</a>
+      <a href="#projects" class="px-6 py-3 border border-cyan-500 rounded-xl hover:bg-cyan-900 transition">Projects</a>
+    </div>
   </div>
-</header>
+</section>
 
-<section>
-  <h2>About Me</h2>
-  <p>
-    I’m a Site Reliability Engineer with 6+ years of experience building reliable,
-    scalable, and secure cloud‑native systems. I specialize in AWS, Kubernetes,
-    CI/CD, observability, and incident management.
+<!-- ABOUT -->
+<section class="max-w-6xl mx-auto px-6 py-20">
+  <h2 class="text-4xl font-bold">About</h2>
+  <p class="mt-6 text-gray-400 leading-relaxed text-lg">
+    Site Reliability Engineer with 6+ years of experience designing, building, and operating
+    highly available cloud‑native platforms. Specialized in AWS, Kubernetes, CI/CD, observability,
+    automation, and incident management. Proven record of achieving 99.9% uptime and reducing
+    MTTR by 35%.
   </p>
 </section>
 
-<section>
-  <h2>Core Skills</h2>
-  <ul class="skills">
-    <li>AWS (EC2, VPC, IAM, Route53)</li>
-    <li>Kubernetes & Docker</li>
-    <li>Terraform, Ansible, Salt</li>
-    <li>CI/CD – Jenkins, Bamboo, Git</li>
-    <li>Observability – Prometheus, Grafana, New Relic, Splunk</li>
-    <li>Security – Vault, SSL/TLS</li>
-  </ul>
-</section>
+<!-- SKILLS -->
+<section class="bg-black/40 backdrop-blur py-20">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="text-4xl font-bold">Tech Stack</h2>
 
-<section>
-  <h2>Experience</h2>
-
-  <div class="card">
-    <h3>DigiCert – Site Reliability Engineer</h3>
-    <span>Feb 2024 – Present</span>
-    <ul>
-      <li>Maintained 99.9% production uptime</li>
-      <li>Reduced MTTR by 35%</li>
-      <li>Owned CI/CD pipelines for 20+ services</li>
-      <li>Managed Kubernetes production clusters</li>
-    </ul>
-  </div>
-
-  <div class="card">
-    <h3>Movate (Client: InMobi) – Senior SRE</h3>
-    <span>Oct 2021 – Feb 2024</span>
-    <ul>
-      <li>Doubled deployment frequency</li>
-      <li>Reduced release failures by 30%</li>
-      <li>Led incident response & RCA</li>
-    </ul>
+    <div class="grid md:grid-cols-3 gap-6 mt-10">
+      <div class="glass">Linux • Networking</div>
+      <div class="glass">AWS • VMware</div>
+      <div class="glass">Docker • Kubernetes</div>
+      <div class="glass">Terraform • Ansible • Salt</div>
+      <div class="glass">CI/CD • Jenkins • GitHub</div>
+      <div class="glass">Prometheus • Grafana • New Relic</div>
+    </div>
   </div>
 </section>
 
-<section>
-  <h2>Key Achievements</h2>
-  <ul>
-    <li>🚀 99.9% uptime across production systems</li>
-    <li>⚡ 35% MTTR reduction</li>
-    <li>🔕 30% on‑call noise reduction</li>
-    <li>🔁 25% fewer release incidents</li>
-  </ul>
+<!-- EXPERIENCE -->
+<section class="max-w-6xl mx-auto px-6 py-20">
+  <h2 class="text-4xl font-bold">Experience</h2>
+
+  <div class="timeline">
+
+    <div class="card">
+      <h3>DigiCert — Site Reliability Engineer</h3>
+      <p>2024 – Present</p>
+      <ul>
+        <li>99.9% uptime across production Kubernetes clusters</li>
+        <li>35% MTTR reduction</li>
+        <li>CI/CD ownership for 20+ microservices</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Movate (Client: InMobi) — Senior SRE</h3>
+      <p>2021 – 2024</p>
+      <ul>
+        <li>2x deployment frequency</li>
+        <li>30% fewer release failures</li>
+        <li>Zero‑downtime Kubernetes rollouts</li>
+      </ul>
+    </div>
+
+  </div>
 </section>
 
-<section class="contact">
-  <h2>Contact</h2>
-  <p>Email: buttshakir911@gmail.com</p>
-  <p>Location: India</p>
+<!-- PROJECTS -->
+<section id="projects" class="bg-black/40 backdrop-blur py-20">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="text-4xl font-bold">Flagship Projects</h2>
+
+    <div class="grid md:grid-cols-3 gap-6 mt-10">
+      <div class="project">Enterprise CI/CD Platform</div>
+      <div class="project">Highly Available AWS Infra</div>
+      <div class="project">Production Monitoring Platform</div>
+    </div>
+  </div>
 </section>
 
-<footer>
-  <p>© 2026 Shakir Bhat • Built with ❤️ & Linux</p>
+<!-- CONTACT -->
+<section id="contact" class="max-w-6xl mx-auto px-6 py-20 text-center">
+  <h2 class="text-4xl font-bold">Let’s Build Reliable Systems</h2>
+  <p class="mt-4 text-gray-400">buttshakir911@gmail.com</p>
+</section>
+
+<footer class="py-10 text-center text-gray-600">
+  © 2026 Shakir Bhat — Built with ❤️, Linux & Kubernetes
 </footer>
 
-<script src="script.js"></script>
+<style>
+.glass {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 1rem;
+  padding: 2rem;
+  text-align: center;
+  backdrop-filter: blur(10px);
+}
+
+.card {
+  background: rgba(255,255,255,0.04);
+  border-left: 4px solid #22d3ee;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+  border-radius: 1rem;
+}
+
+.project {
+  background: linear-gradient(135deg, #020617, #020617);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 1rem;
+  padding: 2rem;
+  text-align: center;
+  transition: transform 0.3s;
+}
+.project:hover { transform: scale(1.05); }
+</style>
+
 </body>
 </html>
