@@ -3,136 +3,121 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shakir Bhat | DevOps / SRE</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Shakir Bhat | SRE / DevOps</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600&display=swap" rel="stylesheet">
+
   <style>
-    body { background: radial-gradient(circle at 20% 20%, #020617, #000); }
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: #000;
+      color: #c9fdd7;
+      font-family: 'JetBrains Mono', monospace;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 60px 20px;
+    }
+
+    h1, h2 {
+      color: #7CFF00;
+      font-weight: 600;
+    }
+
+    h1 { font-size: 2.4rem; }
+    h2 { margin-top: 60px; font-size: 1.4rem; }
+
+    .prompt { color: #7CFF00; }
+    .cmd { color: #fff; }
+
+    a {
+      color: #7CFF00;
+      text-decoration: none;
+    }
+
+    ul { padding-left: 20px; }
+
+    footer {
+      margin-top: 80px;
+      font-size: 0.9rem;
+      opacity: 0.7;
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 1.8rem; }
+    }
   </style>
 </head>
-<body class="text-gray-200">
+<body>
 
-<!-- HERO -->
-<section class="min-h-screen flex items-center justify-center text-center px-6">
-  <div class="max-w-4xl">
-    <h1 class="text-6xl md:text-7xl font-extrabold bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent">
-      Shakir Bhat
-    </h1>
-    <p class="mt-6 text-xl text-gray-400">Site Reliability Engineer • DevOps • Cloud Architect</p>
+<div class="container">
 
-    <div class="mt-8 flex justify-center gap-4">
-      <a href="#contact" class="px-6 py-3 bg-cyan-600 rounded-xl hover:scale-105 transition">Contact</a>
-      <a href="#projects" class="px-6 py-3 border border-cyan-500 rounded-xl hover:bg-cyan-900 transition">Projects</a>
-    </div>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section class="max-w-6xl mx-auto px-6 py-20">
-  <h2 class="text-4xl font-bold">About</h2>
-  <p class="mt-6 text-gray-400 leading-relaxed text-lg">
-    Site Reliability Engineer with 6+ years of experience designing, building, and operating
-    highly available cloud‑native platforms. Specialized in AWS, Kubernetes, CI/CD, observability,
-    automation, and incident management. Proven record of achieving 99.9% uptime and reducing
-    MTTR by 35%.
+  <h1>
+    <span class="prompt">$</span> whoami
+  </h1>
+  <p class="cmd">
+    Shakir Bhat — Site Reliability Engineer / DevOps
   </p>
-</section>
 
-<!-- SKILLS -->
-<section class="bg-black/40 backdrop-blur py-20">
-  <div class="max-w-6xl mx-auto px-6">
-    <h2 class="text-4xl font-bold">Tech Stack</h2>
+  <p class="cmd">
+    6+ years • AWS • Kubernetes • CI/CD • Observability
+  </p>
 
-    <div class="grid md:grid-cols-3 gap-6 mt-10">
-      <div class="glass">Linux • Networking</div>
-      <div class="glass">AWS • VMware</div>
-      <div class="glass">Docker • Kubernetes</div>
-      <div class="glass">Terraform • Ansible • Salt</div>
-      <div class="glass">CI/CD • Jenkins • GitHub</div>
-      <div class="glass">Prometheus • Grafana • New Relic</div>
-    </div>
-  </div>
-</section>
+  <p class="cmd">
+    📍 India • 📧 shakirbhatpc@gmail.com
+  </p>
 
-<!-- EXPERIENCE -->
-<section class="max-w-6xl mx-auto px-6 py-20">
-  <h2 class="text-4xl font-bold">Experience</h2>
+  <p class="cmd">
+    <a href="https://github.com/shakirbhattt">GitHub</a> •
+    <a href="https://www.linkedin.com/in/shakir-bhat-80b770159">LinkedIn</a>
+  </p>
 
-  <div class="timeline">
+  <h2><span class="prompt">$</span> cat about.txt</h2>
+  <p class="cmd">
+    Site Reliability Engineer with 6+ years of experience operating cloud-native
+    production systems. Strong focus on reliability, automation, observability,
+    and incident response. Proven impact: 99.9% uptime and 35% MTTR reduction.
+  </p>
 
-    <div class="card">
-      <h3>DigiCert — Site Reliability Engineer</h3>
-      <p>2024 – Present</p>
-      <ul>
-        <li>99.9% uptime across production Kubernetes clusters</li>
-        <li>35% MTTR reduction</li>
-        <li>CI/CD ownership for 20+ microservices</li>
-      </ul>
-    </div>
+  <h2><span class="prompt">$</span> ls skills/</h2>
+  <ul class="cmd">
+    <li>Linux, Networking, TCP/IP, DNS</li>
+    <li>AWS (EC2, VPC, IAM, ELB, Route53)</li>
+    <li>Docker, Kubernetes</li>
+    <li>Terraform, Ansible, Salt</li>
+    <li>CI/CD – Jenkins, Git, Bamboo</li>
+    <li>Prometheus, Grafana, New Relic, Splunk</li>
+    <li>Vault, SSL/TLS</li>
+  </ul>
 
-    <div class="card">
-      <h3>Movate (Client: InMobi) — Senior SRE</h3>
-      <p>2021 – 2024</p>
-      <ul>
-        <li>2x deployment frequency</li>
-        <li>30% fewer release failures</li>
-        <li>Zero‑downtime Kubernetes rollouts</li>
-      </ul>
-    </div>
+  <h2><span class="prompt">$</span> history | grep experience</h2>
+  <ul class="cmd">
+    <li>DigiCert — Site Reliability Engineer (2024–Present)</li>
+    <li>Movate / InMobi — Senior SRE (2021–2024)</li>
+    <li>SnapBizz — QA / DevOps Engineer (2021)</li>
+    <li>Hotel Zaryab — System Engineer (2019–2021)</li>
+  </ul>
 
-  </div>
-</section>
+  <h2><span class="prompt">$</span> cat achievements.log</h2>
+  <ul class="cmd">
+    <li>99.9% production uptime</li>
+    <li>35% MTTR reduction</li>
+    <li>30% alert noise reduction</li>
+    <li>2x deployment frequency</li>
+  </ul>
 
-<!-- PROJECTS -->
-<section id="projects" class="bg-black/40 backdrop-blur py-20">
-  <div class="max-w-6xl mx-auto px-6">
-    <h2 class="text-4xl font-bold">Flagship Projects</h2>
+  <h2><span class="prompt">$</span> exit</h2>
 
-    <div class="grid md:grid-cols-3 gap-6 mt-10">
-      <div class="project">Enterprise CI/CD Platform</div>
-      <div class="project">Highly Available AWS Infra</div>
-      <div class="project">Production Monitoring Platform</div>
-    </div>
-  </div>
-</section>
+  <footer>
+    Built like production systems — simple, reliable, observable.
+  </footer>
 
-<!-- CONTACT -->
-<section id="contact" class="max-w-6xl mx-auto px-6 py-20 text-center">
-  <h2 class="text-4xl font-bold">Let’s Build Reliable Systems</h2>
-  <p class="mt-4 text-gray-400">buttshakir911@gmail.com</p>
-</section>
-
-<footer class="py-10 text-center text-gray-600">
-  © 2026 Shakir Bhat — Built with ❤️, Linux & Kubernetes
-</footer>
-
-<style>
-.glass {
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 1rem;
-  padding: 2rem;
-  text-align: center;
-  backdrop-filter: blur(10px);
-}
-
-.card {
-  background: rgba(255,255,255,0.04);
-  border-left: 4px solid #22d3ee;
-  padding: 1.5rem;
-  margin-top: 1.5rem;
-  border-radius: 1rem;
-}
-
-.project {
-  background: linear-gradient(135deg, #020617, #020617);
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 1rem;
-  padding: 2rem;
-  text-align: center;
-  transition: transform 0.3s;
-}
-.project:hover { transform: scale(1.05); }
-</style>
+</div>
 
 </body>
 </html>
