@@ -3,11 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shakir Bhat | Portfolio </title>
+  <title>Shakir Bhat | SRE / DevOps</title>
 
-  <!-- Font + Icons -->
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600&display=swap" rel="stylesheet">
-  <script src="https://unpkg.com/feather-icons"></script>
 
   <style>
     body {
@@ -24,7 +22,7 @@
       padding: 60px 20px;
     }
 
-    /* terminal command style */
+    /* terminal prompt + commands */
     h1, h2 {
       font-size: 1.4rem;
       font-weight: 400;
@@ -38,34 +36,34 @@
 
     .cmd {
       color: #ffffff;
+      opacity: 0;
+      animation: fadeIn 0.6s ease forwards;
+      animation-delay: 0.3s;
     }
 
-    .icon-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 10px;
+    /* blinking cursor */
+    .cursor {
+      display: inline-block;
+      width: 8px;
+      height: 1.2rem;
+      background: #7CFF00;
+      margin-left: 4px;
+      animation: blink 1s infinite;
+      vertical-align: middle;
     }
 
-    .chip {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      padding: 6px 12px;
-      border: 1px solid #1f2937;
-      border-radius: 6px;
-      background: #020617;
-      font-size: 0.9rem;
-      color: #c9fdd7;
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(4px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     a {
       color: #7CFF00;
       text-decoration: none;
-    }
-
-    ul {
-      padding-left: 20px;
     }
 
     footer {
@@ -80,197 +78,57 @@
 <body>
 <div class="container">
 
-  <!-- WHOAMI -->
-  <h1><span class="prompt">$</span> whoami</h1>
-<p class="cmd">Shakir Bhat — Cloud • Site Reliability Engineer • DevOps (6+ years)</p>
+  <!-- WHOAMI (typing animation) -->
+  <h1>
+    <span class="prompt">$</span>
+    <span id="type-whoami"></span>
+    <span class="cursor"></span>
+  </h1>
 
-<h2><span class="prompt">$</span> pwd</h2>
-<p class="cmd">/Kashmir • /Bangalore</p>
+  <p class="cmd">Shakir Bhat — Cloud • Site Reliability Engineer • DevOps (6+ years)</p>
 
-<h2><span class="prompt">$</span> printenv CONTACT</h2>
+  <!-- LOCATION -->
+  <h2><span class="prompt">$</span> pwd</h2>
+  <p class="cmd">/kashmir • /bangalore</p>
+
+  <!-- CONTACT -->
+  <h2><span class="prompt">$</span> printenv CONTACT</h2>
+  <p class="cmd">email=shakirbhatpc@gmail.com</p>
   <p class="cmd">
-  EMAIL=<a href="shakirbhatpc@gmail.com" target="_blank">shakirbhatpc@gmail.com</a>
-</p>
-<p class="cmd">
-  GITHUB=<a href="https://github.com/shakirbhattt" target="_blank">github.com/shakirbhattt</a>
-</p>
-<p class="cmd">
-  LinkedIn=<a href="https://www.linkedin.com/in/shakirbhattt" target="_blank">linkedin.com/in/shakirbhattt</a>
-</p>
-  <!-- SKILLS -->
-  <h2><span class="prompt">$</span> cat skills/all.txt</h2>
-  <div class="icon-row">
-    <!-- OS -->
-    <div class="chip"><i data-feather="terminal"></i> Windows</div>
-    <div class="chip"><i data-feather="terminal"></i> Linux</div>
-    <div class="chip"><i data-feather="monitor"></i> RHEL</div>
-    <div class="chip"><i data-feather="monitor"></i> Ubuntu</div>
-    <div class="chip"><i data-feather="monitor"></i> CentOS</div>
+    github=<a href="https://github.com/shakirbhattt" target="_blank">github.com/shakirbhattt</a>
+  </p>
+  <p class="cmd">
+    linkedin=<a href="https://www.linkedin.com/in/shakir-bhat-80b770159" target="_blank">
+      linkedin.com/in/shakir-bhat-80b770159
+    </a>
+  </p>
 
-    <!-- Cloud -->
-    <div class="chip"><i data-feather="cloud"></i> AWS</div>
-    <div class="chip"><i data-feather="cpu"></i> VMware</div>
-    <div class="chip"><i data-feather="layers"></i> Kubernetes</div>
-    <div class="chip"><i data-feather="box"></i> Docker</div>
+  <!-- FUN BUT PROFESSIONAL -->
+  <h2><span class="prompt">$</span> uptime</h2>
+  <p class="cmd">up 6 years, load average: 0.00, 0.01, 0.05</p>
 
-    <!-- CI/CD -->
-    <div class="chip"><i data-feather="git-branch"></i> Git</div>
-    <div class="chip"><i data-feather="repeat"></i> Jenkins</div>
-    <div class="chip"><i data-feather="repeat"></i> Bamboo</div>
-
-    <!-- IaC -->
-    <div class="chip"><i data-feather="settings"></i> Terraform</div>
-    <div class="chip"><i data-feather="settings"></i> Ansible</div>
-    <div class="chip"><i data-feather="settings"></i> Salt</div>
-
-    <!-- Monitoring -->
-    <div class="chip"><i data-feather="activity"></i> Prometheus</div>
-    <div class="chip"><i data-feather="bar-chart"></i> Grafana</div>
-    <div class="chip"><i data-feather="activity"></i> New Relic</div>
-    <div class="chip"><i data-feather="activity"></i> Splunk</div>
-    <div class="chip"><i data-feather="activity"></i> Nagios</div>
-
-    <!-- Security -->
-    <div class="chip"><i data-feather="shield"></i> Vault</div>
-    <div class="chip"><i data-feather="lock"></i> SSL/TLS</div>
-
-    <!-- Other -->
-    <div class="chip"><i data-feather="code"></i> Bash</div>
-    <div class="chip"><i data-feather="database"></i> MySQL</div>
-    <div class="chip"><i data-feather="database"></i> PostgreSQL</div>
-    <div class="chip"><i data-feather="globe"></i> TCP/IP</div>
-    <div class="chip"><i data-feather="globe"></i> DNS</div>
-    <div class="chip"><i data-feather="package"></i> Nexus</div>
-    <div class="chip"><i data-feather="package"></i> Docker Hub</div>
-    <div class="chip"><i data-feather="package"></i> GitHub</div>
-    <div class="chip"><i data-feather="package"></i> Helm</div>
-    <div class="chip"><i data-feather="file-text"></i> YAML</div>
-    <div class="chip"><i data-feather="users"></i> Jira</div>
-    <div class="chip"><i data-feather="bell"></i> OpsGenie</div>
-    <div class="chip"><i data-feather="book"></i> Confluence</div>
-  </div>
-
-  <!-- EXPERIENCE -->
-  <h2><span class="prompt">$</span> history | grep experience</h2>
-
-  <p class="cmd"><b>DigiCert</b> — Site Reliability Engineer (Feb 2024 – Present)</p>
-  <ul class="cmd">
-    <li>Automated deployment, scaling, and monitoring workflows, reducing manual operational effort by 40% and improving deployment consistency.</li>
-
-<li>Implemented centralized monitoring, logging, and alerting using New Relic and Splunk, reducing incident detection time by 35%.</li>
-
-<li>Owned CI/CD pipelines supporting 20+ services, improving deployment success rates and reducing release-related incidents.</li>
-
-<li>Improved cross-functional collaboration between development, QA, and product teams by standardizing communication and documentation, accelerating deployments by 30%.</li>
-
-<li>Standardized configuration management using Salt, reducing configuration drift and environment inconsistencies by 30%.</li>
-
-<li>Led on-call operations and incident response, reducing mean time to recovery (MTTR) by 35% through improved RCA and postmortem practices.</li>
-
-<li>Administered Kubernetes clusters supporting production workloads, achieving 99.9% service availability.</li>
-
-<li>Architected and operated highly available, fault-tolerant systems meeting strict uptime and performance SLAs.</li>
-
-<li>Defined and tested disaster recovery strategies through regular drills, ensuring recovery objectives were consistently met.</li>
-
-<li>Managed SSL certificate lifecycle using DigiCert CertCentral and Trust Lifecycle Manager (TLM), preventing certificate expirations and security incidents.</li>
-
-<li>Defined and tracked SLIs and SLOs for critical services to measure reliability and ensure SLA compliance.</li>
-
-<li>Tuned monitoring alerts and thresholds, reducing on-call noise and false positives by 30%.</li>
-
-<li>Performed capacity planning and resource optimization for Kubernetes workloads to prevent performance degradation during peak usage.</li>
-
-<li>Streamlined routine operational tasks and runbooks using Bash and CI/CD workflows, reducing operational toil.</li>
-
-<li>Supported production readiness and change management processes, validating monitoring, rollback, and deployment strategies before releases.</li>
-  </ul>
-
-  <p class="cmd"><b>Movate (InMobi)</b> — Senior SRE (Oct 2021 – Feb 2024)</p>
-  <ul class="cmd">
-   <li>Promoted to Senior Site Reliability Engineer based on ownership of production reliability, CI/CD automation, and consistent incident management performance.</li>
-
-<li>Drove CI/CD automation pipelines, increasing deployment frequency by 2x and reducing release failures by 30% across multiple services.</li>
-
-<li>Orchestrated Kubernetes clusters supporting 15+ microservices, enabling zero-downtime production deployments and stable rollouts.</li>
-
-<li>Deployed monitoring and observability using Prometheus and Grafana, improving system visibility and alert accuracy, and reducing false alerts by 25%.</li>
-
-<li>Directed incident response and escalation handling, performing RCA and publishing postmortems, contributing to a 30% reduction in repeat incidents.</li>
-
-<li>Executed production and UAT releases, managed SSL certificate renewals, and supported environment promotions through CI/CD workflows, ensuring release reliability.</li>
-  </ul>
-
-  
-  <p class="cmd"><b>Snapbizz</b> — QA DevOps Engineer (Jun 2021 – Sep 2021)</p>
-  <ul class="cmd">
-   <li>Automated web and mobile testing using Selenium and Appium, increasing regression coverage by 40% and improving release confidence.</li>
-
-<li>Created and executed TestNG-based test suites, reducing manual testing effort by 50% and speeding up validation cycles.</li>
-
-<li>Designed and maintained data-driven automation frameworks in Java, improving test reusability by 40% and enabling scalable execution across multiple test suites.</li>
-
-<li>Developed web scraping solutions to extract and validate test data, reducing manual data validation effort by 50% and improving test execution efficiency.</li>
-
-<li>Provisioned AWS EC2 and S3 resources to support testing and application environments, enabling scalable test execution.</li>
-  </ul>
-
-
-  <p class="cmd"><b>Hotel Zaryab</b> — System Engineer (Nov 2019 – Jun 2021)</p>
-  <ul class="cmd">
-   <li>Installed, configured, and maintained software, hardware, and system components, ensuring stable day-to-day operations and reducing unplanned downtime by 25%.</li>
-
-<li>Administered network servers and infrastructure tools, maintaining >99.5% system availability and consistent performance across production environments.</li>
-
-<li>Monitored system performance and capacity metrics, proactively identifying resource constraints and preventing service impact during peak usage periods.</li>
-
-<li>Diagnosed and resolved system outages, restoring services within defined SLAs and reducing average downtime per incident by 30%.</li>
-  </ul>
-
-
-  <p class="cmd"><b>KVCH</b> — Cloud AWS Intern (Jan 2019 – May 2019)</p>
-  <ul class="cmd">
-   <li>Provisioned and tuned EC2 instances to support secure and scalable workloads in AWS environments.</li>
-
-<li>Monitored AWS services using CloudWatch and CloudTrail, improving operational visibility, audit readiness, and compliance reporting across cloud environments.</li>
-
-<li>Designed AWS infrastructure components including VPC, IAM, Load Balancers, Route 53, EBS, EFS, and Glacier, following AWS best practices.</li>
-  </ul>
-
-<h2><span class="prompt">$</span> cat education.txt</h2>
-
-<p class="cmd"><b>B.Tech, Computer Science Engineering</b> (2015 – 2019)</p>
-<p class="cmd">MRS Punjab Technical University, Punjab</p>
-
-  <h2><span class="prompt">$</span> cat achievements.log</h2>
-
-<ul class="cmd">
-  <li>Maintained 99.9% production uptime through improved observability and reliability practices.</li>
-
-  <li>Reduced incident MTTR by 35% via alert tuning and structured RCA processes.</li>
-
-  <li>Reduced on-call alert noise by 30% by optimizing alert thresholds, routing rules, and escalation policies.</li>
-
-  <li>Enabled faster and safer production releases by improving CI/CD deployment workflows, reducing release-related incidents by 25%.</li>
-</ul>
-
-  <h2><span class="prompt">$</span> cat awards.log</h2>
-
-<ul class="cmd">
-  <li>High-Flyer Award 2023 - InMobi (Movate) </li>
-</ul>
-  
-  <!-- EXIT -->
-  <h2><span class="prompt">$</span> exit</h2>
-
+  <!-- FOOTER -->
   <footer>
-   Built with 💚 by Shakir Bhat — simple, reliable, production-ready
+    <span class="prompt">$</span> echo "built with ❤️ by shakir | production-ready by design"
   </footer>
 
 </div>
 
+<!-- TYPING SCRIPT -->
 <script>
-  feather.replace();
+  const text = "whoami";
+  let i = 0;
+
+  function typeEffect() {
+    if (i < text.length) {
+      document.getElementById("type-whoami").innerHTML += text.charAt(i);
+      i++;
+      setTimeout(typeEffect, 120);
+    }
+  }
+
+  typeEffect();
 </script>
+
 </body>
 </html>
